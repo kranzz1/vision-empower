@@ -38,6 +38,7 @@ int buttonState = 0; 	//Variable for button input
 int flag = 0;		//unknown variable, potentially not used?
 int start_new= 0;	//orphaned variable
 int dutyCycle = 0; 	//PWM Duty Cycle
+int cycle = 0;		//Variable to store cycle running status
 
 int iteration = 1;
 

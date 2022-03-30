@@ -4,6 +4,10 @@
 // This is an edited version of the initial Vision Empower Code to simplify the program to one output
 // and implement PWM modulation for the vibration motor.
 
+//TO-DO: 
+//	Clean up code and comment
+//	Resolve orphaned variables 
+
 //Written and compiled for Arduino Nano
 //			 -------------
 //			=|16       15|=
@@ -40,7 +44,7 @@ int iteration = 1;
 void setup()
 {
   Serial.begin(9600); //commence yelling into the void
-  pinMode(A4, INPUT); //input from 
+  pinMode(A4, INPUT); //input from photosensor 
   pinMode(buzzer, OUTPUT); // Set buzzer - pin 9 as an output
   pinMode(buttonPin, INPUT);
   pinMode(motorPin1, OUTPUT);
@@ -59,8 +63,6 @@ void Start_Motor()
 
 void loop()
 {
-
-  
   buttonState = digitalRead(buttonPin); // button input
   if (buttonState == HIGH && cycle == 0)
   {
