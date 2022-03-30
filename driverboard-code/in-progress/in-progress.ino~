@@ -1,4 +1,4 @@
-//Vision Empower Glove Code - Version 1.0.1
+//Vision Empower Glove Code - Version 1.5.1
 //Code written by Vision Empower Team, and edited by Zachary Kranz
 
 // This is an edited version of the initial Vision Empower Code to simplify the program to one output
@@ -7,6 +7,7 @@
 //TO-DO: 
 //	Clean up code and comment
 //	Resolve orphaned variables 
+//	Implement and test standby mode
 
 //Written and compiled for Arduino Nano
 //			 -------------
@@ -38,8 +39,9 @@ int buttonState = 0; 	//Variable for button input
 int flag = 0;		//unknown variable, potentially not used?
 int start_new= 0;	//orphaned variable
 int dutyCycle = 0; 	//PWM Duty Cycle
+int cycle = 0;		//Variable to store cycle running status
 
-int iteration = 1;
+int iteration = 1;	//orphaned variable
 
 void setup()
 {
