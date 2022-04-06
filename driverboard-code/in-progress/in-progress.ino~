@@ -6,8 +6,8 @@
 
 //TO-DO: 
 //	Clean up code and comment
-//	Resolve orphaned variables 
-//	Implement and test standby mode
+//	Resolve orphaned variables - DONE 
+//	Implement and test standby mode - DONE
 
 //Written and compiled for Arduino Nano
 //			 -------------
@@ -32,16 +32,17 @@ int motorPin1 = 3; //motor transistor is connected to pin 3
 //int motorPin2 = 4; //motor transistor is connected to pin 4
 //int motorPin3 = 5; //motor transistor is connected to pin 5
 //int motorPin4 = 6; //motor transistor is connected to pin 6
-int read1 = 0;
 const int buzzer = 9; 	//buzzer to arduino pin 9
 const int buttonPin = 7; //Button to arduino pin 2
 int buttonState = 0; 	//Variable for button input
-int flag = 0;		//unknown variable, potentially not used?
-int start_new= 0;	//orphaned variable
 int dutyCycle = 0; 	//PWM Duty Cycle
-int cycle = 0;		//Variable to store cycle running status
+int cycle = 1;		//Variable to store cycle running status
 
-int iteration = 1;	//orphaned variable
+//int iteration = 1;	//orphaned variable
+//int flag = 0;		//unknown variable, potentially not used?
+//int start_new= 0;	//orphaned variable
+//int read1 = 0;	//orphaned variable
+
 
 void setup()
 {
@@ -53,13 +54,14 @@ void setup()
   //pinMode(motorPin2, OUTPUT);
   //pinMode(motorPin3, OUTPUT);
   //pinMode(motorPin4, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void Start_Motor()
 {
 // Read the value from the photosensor, determine duty cycle, and use analogWrite to implement PWM  
   delay(10);
-  Serial.println(dutyCycle); //
+  Serial.println(dutyCycle); //send duty cycle to serial out pin
   analogWrite(motorPin1, dutyCycle); //use analogWrite function to implement PWM
 } //end of Start_Motor
 
@@ -70,24 +72,24 @@ void loop()
   {
     tone(buzzer, 1000); // Send 1KHz sound signal...
     delay(1000);	//wait a second in order for finger to move off button
-    noTone(buzzer);
+    noTone(buzzer);	// stop sending 1khz sound
     cycle = 1; 		//Set cycle variable to 1 to
 	delay(1000);	//wait a second in order for finger to move off button
 
   } //end of if
-  else if (buttonState == LOW && cycle == 1)
+  else if (buttonState == HIGH && cycle == 1)
   {
     cycle = 0;
-	delay(1000); //wait a second in order for finger to move off button
+	delay(1000); 	//wait a second in order for finger to move off button
   } // end of elif
   else
 {
-	cycle = cycle; //keep on keeping on
+	cycle = cycle; 	//keep on keeping on
 }//end of else
-  noTone(buzzer);
+  noTone(buzzer);	//in case the buzzer is still making a noise, stop making a noise
   if(cycle==1)
   {
-    dutyCycle = analogRead(A4);
+    dutyCycle = analogRead(A4);	//pull sigmal from photosensor
     Start_Motor();
 }//end of if
     } //end of loop

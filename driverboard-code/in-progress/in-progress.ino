@@ -36,7 +36,7 @@ const int buzzer = 9; 	//buzzer to arduino pin 9
 const int buttonPin = 7; //Button to arduino pin 2
 int buttonState = 0; 	//Variable for button input
 int dutyCycle = 0; 	//PWM Duty Cycle
-int cycle = 0;		//Variable to store cycle running status
+int cycle = 1;		//Variable to store cycle running status
 
 //int iteration = 1;	//orphaned variable
 //int flag = 0;		//unknown variable, potentially not used?
@@ -54,6 +54,7 @@ void setup()
   //pinMode(motorPin2, OUTPUT);
   //pinMode(motorPin3, OUTPUT);
   //pinMode(motorPin4, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void Start_Motor()
@@ -76,7 +77,7 @@ void loop()
 	delay(1000);	//wait a second in order for finger to move off button
 
   } //end of if
-  else if (buttonState == LOW && cycle == 1)
+  else if (buttonState == HIGH && cycle == 1)
   {
     cycle = 0;
 	delay(1000); 	//wait a second in order for finger to move off button
