@@ -27,8 +27,7 @@
 //			=|29        2|= Input Button
 //			=|30        1|=
 //			 -------------
-
-int motorPin1 = D3; //motor transistor is connected to pin 6
+int motorPin1 = 3; //motor transistor is connected to pin 6
 //int motorPin2 = 4; //motor transistor is connected to pin 4
 //int motorPin3 = 5; //motor transistor is connected to pin 5
 //int motorPin4 = 6; //motor transistor is connected to pin 6
@@ -50,7 +49,7 @@ void setup()
   pinMode(A4, INPUT); //input from photosensor 
   pinMode(buzzer, OUTPUT); // Set buzzer - pin 9 as an output
   pinMode(buttonPin, INPUT);
-  pinMode(D3, OUTPUT);
+  pinMode(motorPin1, OUTPUT);
   //pinMode(motorPin2, OUTPUT);
   //pinMode(motorPin3, OUTPUT);
   //pinMode(motorPin4, OUTPUT);
@@ -64,22 +63,26 @@ void Start_Motor()
   if(dutyCycle < 200)
   {
       Serial.println(0); //send duty cycle to serial out pin
-      analogWrite(D3, 0); //use analogWrite function to implement PWM
+      analogWrite(motorPin1, 0); //use analogWrite function to implement PWM
+      analogWrite(LED_BUILTIN, 0);
   }   
   else if(200 < dutyCycle && dutyCycle < 500)
   {
       Serial.println(350);
-      analogWrite(D3, 350);
+      analogWrite(motorPin1, 350);
+      analogWrite(LED_BUILTIN, 350);
   }
    else if(500 < dutyCycle && dutyCycle < 800)
    {
         Serial.println(750);
-      analogWrite(D3, 750);
+      analogWrite(motorPin1, 750);
+      analogWrite(LED_BUILTIN, 750);
    }
    else if(dutyCycle > 800)
    {
       Serial.println(1024);
-      analogWrite(D3, 1024);
+      analogWrite(motorPin1, 1024);
+      analogWrite(LED_BUILTIN, 1024);
   }
   
 } //end of Start_Motor
