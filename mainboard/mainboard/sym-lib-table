@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "vision-empower")(type "KiCad")(uri "${KIPRJMOD}/project-library/vision-empower.kicad_sym")(options "")(descr ""))
+)
