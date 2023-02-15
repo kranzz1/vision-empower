@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 2N3904TFR
+D 2N3904TFR
+F https://www.onsemi.com/pub/Collateral/2N3904-D.pdf
+$ENDCMP
+# end doc library

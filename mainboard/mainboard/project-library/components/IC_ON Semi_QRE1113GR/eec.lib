@@ -1,0 +1,68 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# ON Semi QRE1113GR
+#
+DEF QRE1113GR U 0 40 Y Y 1 L N
+F0 "U" 0 200 50 H V L CNN 
+F1 "QRE1113GR" 0 300 50 H V L CNN 
+F2 "ON_Semi-100CY-01_2017-O-*" 0 400 50 H I L CNN 
+F3 "https://www.onsemi.jp/PowerSolutions/document/QRE1113-D.PDF" 0 500 50 H I L CNN 
+F4 "No" 0 600 50 H I L CNN "automotive"
+F5 "IC" 0 700 50 H I L CNN "category"
+F6 "0.001uA" 0 800 50 H I L CNN "dark current"
+F7 "Sensors" 0 900 50 H I L CNN "device class L1"
+F8 "Optical Sensors" 0 1000 50 H I L CNN "device class L2"
+F9 "Phototransistor" 0 1100 50 H I L CNN "device class L3"
+F10 "SENSOR OPTO TRANS REFL SMD PHOTO" 0 1200 50 H I L CNN "digikey description"
+F11 "QRE1113GRCT-ND" 0 1300 50 H I L CNN "digikey part number"
+F12 "20us" 0 1400 50 H I L CNN "fall time"
+F13 "http://www.onsemi.com/pub/Collateral/100CY.PDF" 0 1500 50 H I L CNN "footprint url"
+F14 "1.87mm" 0 1600 50 H I L CNN "height"
+F15 "SOP180P460X160-4" 0 1700 50 H I L CNN "ipc land pattern name"
+F16 "Yes" 0 1800 50 H I L CNN "lead free"
+F17 "Straight" 0 1900 50 H I L CNN "led orientation"
+F18 "ce9d24aae4f1c0d1" 0 2000 50 H I L CNN "library id"
+F19 "ON Semi" 0 2100 50 H I L CNN "manufacturer"
+F20 "0.9mA" 0 2200 50 H I L CNN "max collector current"
+F21 "Optical Switches, Reflective, Phototransistor Output Reflective Sensor" 0 2300 50 H I L CNN "mouser description"
+F22 "512-QRE1113GR" 0 2400 50 H I L CNN "mouser part number"
+F23 "SMD-4_GULLWING" 0 2500 50 H I L CNN "package"
+F24 "75mW" 0 2600 50 H I L CNN "power dissipation"
+F25 "20us" 0 2700 50 H I L CNN "rise time"
+F26 "Yes" 0 2800 50 H I L CNN "rohs"
+F27 "Other" 0 2900 50 H I L CNN "sensor output"
+F28 "0.07mm" 0 3000 50 H I L CNN "standoff height"
+F29 "+85°C" 0 3100 50 H I L CNN "temperature range high"
+F30 "-40°C" 0 3200 50 H I L CNN "temperature range low"
+F31 "940nm" 0 3300 50 H I L CNN "wavelength"
+DRAW
+X Anode 1 100 0 300 R 40 0 1 1 P 
+X Collector 3 100 -600 200 R 40 0 1 1 P 
+X Emitter 4 100 -1000 200 R 40 0 1 1 P 
+X Cathode 2 100 -400 300 R 40 0 1 1 P 
+P 2 1 1 0 400 -700 400 -900 N
+P 2 1 1 0 360 -890 300 -900 N
+P 2 1 1 0 340 -860 300 -900 N
+P 2 1 1 0 360 -890 340 -860 N
+P 2 1 1 0 400 -750 300 -700 N
+P 2 1 1 0 400 -850 300 -900 N
+P 2 1 1 0 300 -600 300 -700 N
+P 2 1 1 0 300 -900 300 -1000 N
+P 2 1 1 0 300 -100 400 -300 N
+P 2 1 1 0 400 -300 500 -100 N
+P 2 1 1 0 500 -100 300 -100 N
+P 2 1 1 0 300 -300 500 -300 N
+P 2 1 1 0 400 0 400 -100 N
+P 2 1 1 0 400 -300 400 -400 N
+S 200 100 800 -1100 1 1 0 f
+P 2 1 1 0 550 -160 690 -270 N
+P 2 1 1 0 690 -270 660 -210 N
+P 2 1 1 0 690 -270 620 -250 N
+P 2 1 1 0 540 -790 670 -710 N
+P 2 1 1 0 540 -790 580 -730 N
+P 2 1 1 0 540 -790 610 -780 N
+ENDDRAW
+ENDDEF
+#
+# End Library
