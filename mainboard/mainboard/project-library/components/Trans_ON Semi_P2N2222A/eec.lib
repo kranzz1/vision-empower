@@ -1,0 +1,36 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# ON Semi P2N2222A
+#
+DEF P2N2222A Q 0 40 Y Y 1 L N
+F0 "Q" 0 300 50 H V L CNN 
+F1 "P2N2222A" 0 400 50 H V L CNN 
+F2 "ON_Semi-CASE_2911-0-0-*" 0 500 50 H I L CNN 
+F3 "http://www.onsemi.com/pub/Collateral/P2N2222A-D.PDF" 0 600 50 H I L CNN 
+F4 "Trans" 0 700 50 H I L CNN "category"
+F5 "TRANS NPN 40V 0.6A TO92" 0 800 50 H I L CNN "digikey description"
+F6 "P2N2222AOS-ND" 0 900 50 H I L CNN "digikey part number"
+F7 "TO-92" 0 1000 50 H I L CNN "ipc land pattern name"
+F8 "yes" 0 1100 50 H I L CNN "lead free"
+F9 "c85d4366f1170be1" 0 1200 50 H I L CNN "library id"
+F10 "ON Semi" 0 1300 50 H I L CNN "manufacturer"
+F11 "863-P2N2222A" 0 1400 50 H I L CNN "mouser part number"
+F12 "TO-92" 0 1500 50 H I L CNN "package"
+F13 "yes" 0 1600 50 H I L CNN "rohs"
+F14 "+150°C" 0 1700 50 H I L CNN "temperature range high"
+F15 "-55°C" 0 1800 50 H I L CNN "temperature range low"
+DRAW
+X BASE 2 100 0 100 R 40 0 1 1 U 
+X COLLECTOR 1 300 200 100 D 40 0 1 1 U 
+X EMITTER 3 300 -200 100 U 40 0 1 1 U 
+P 2 1 1 0 200 100 200 -100 N
+P 2 1 1 0 240 -90 300 -100 N
+P 2 1 1 0 260 -60 300 -100 N
+P 2 1 1 0 240 -90 260 -60 N
+P 2 1 1 0 200 50 300 100 N
+P 2 1 1 0 200 -50 300 -100 N
+ENDDRAW
+ENDDEF
+#
+# End Library
