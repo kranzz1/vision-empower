@@ -5,28 +5,28 @@
 // and implement PWM modulation for the vibration motor.
 
 //TO-DO: 
-//	Clean up code and comment
+//	Clean up code and comment -DONE
 //	Resolve orphaned variables - DONE 
 //	Implement and test standby mode - DONE
 
 //Written and compiled for Arduino Nano
-//			 -------------
-//			=|16       15|=
-//			=|17       14|=
+//			           -------------
+//		          	=|16       15|=
+//		           	=|17       14|=
 //	Sensor Input	=|18       13|=
-//			=|19       12|=
-//			=|20       11|=
-//			=|21       10|=
-//			=|22   N    9|= Audiable Buzzer
-//			=|23   A    8|=
-//			=|24   N    7|=
-//			=|2    O    6|= Motor Transistor 1
-//			=|26        5|= Motor Transistor 3 - Not Used
-//			=|27        4|= Motor Transistor 2 - Not Used
-//			=|28        3|= Motor Transistor 4 - Not Used
-//			=|29        2|= Input Button
-//			=|30        1|=
-//			 -------------
+//			          =|19       12|=
+//		          	=|20       11|=
+//		           	=|21       10|=
+//          			=|22   N    9|= Audiable Buzzer
+//	          		=|23   A    8|=
+//           			=|24   N    7|=
+//		          	=|2    O    6|= Motor Transistor 1
+//	           		=|26        5|= Motor Transistor 3 - Not Used
+//		          	=|27        4|= Motor Transistor 2 - Not Used
+//		          	=|28        3|= Motor Transistor 4 - Not Used
+//	          		=|29        2|= Input Button
+//	          		=|30        1|=
+//          			 -------------
 int motorPin1 = 3; //motor transistor is connected to pin 6
 //int motorPin2 = 4; //motor transistor is connected to pin 4
 //int motorPin3 = 5; //motor transistor is connected to pin 5
@@ -68,20 +68,20 @@ void Start_Motor()
   }   
   else if(200 < dutyCycle && dutyCycle < 500)
   {
-      Serial.println(350);
-      analogWrite(motorPin1, 350);
+      Serial.println(350);  //send duty cycle to serial out pin
+      analogWrite(motorPin1, 350); //use analogWrite function to implement PWM
       analogWrite(LED_BUILTIN, 350);
   }
    else if(500 < dutyCycle && dutyCycle < 800)
    {
-        Serial.println(750);
-      analogWrite(motorPin1, 750);
+        Serial.println(750);  //send duty cycle to serial out pin
+      analogWrite(motorPin1, 750);  //use analogWrite function to implement PWM
       analogWrite(LED_BUILTIN, 750);
    }
    else if(dutyCycle > 800)
    {
-      Serial.println(1024);
-      analogWrite(motorPin1, 1024);
+      Serial.println(1024);     //send duty cycle to serial out pin
+      analogWrite(motorPin1, 1024);   //use analogWrite function to implement PWM
       analogWrite(LED_BUILTIN, 1024);
   }
   
